@@ -1,0 +1,246 @@
+# Artificial Intelligence:
+
+ 1. Learn Python:
+
+    Python is the most widely used language in AIML. Focus on:
+
+    Variables, loops, and functions.
+    Libraries like NumPy, Pandas, and Matplotlib for data manipulation and visualization.
+
+
+  2. Understand Math Basics:
+
+     Brush up on Linear Algebra, Probability, and Statistics.
+
+     Focus on topics like vectors, matrices, distributions, and basic calculus.
+
+
+ 3. Explore Machine Learning Basics
+
+    Learn about:
+
+        Supervised learning (Regression, Classification).
+
+        Unsupervised learning (Clustering, Dimensionality Reduction).
+        
+        Use Scikit-learn to implement basic algorithms.
+
+        Use Kaggle datasets for practice.
+
+
+
+## Python:
+
+
+ 1.NumPy (Numerical Python)
+
+    Purpose: Efficient handling of numerical data, especially arrays and matrices.
+    Why Use It:
+        Faster than Python lists for numerical computations.
+        Provides a wide range of mathematical functions for arrays.
+
+ Key Functions:
+
+        np.array() - Create arrays.
+        np.mean() / np.median() - Compute mean/median.
+        np.sum() / np.prod() - Calculate sum/product of elements.
+        np.linspace() / np.arange() - Generate sequences of numbers.
+        np.dot() - Matrix multiplication.
+        np.random.rand() - Generate random numbers.
+
+```
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+print("Mean:", np.mean(arr))
+
+```
+
+
+
+ 2.Pandas (Python Data Analysis Library)
+
+    Purpose: Manipulate and analyze structured data (like tables).
+    Why Use It:
+        Easier handling of datasets (CSV, Excel, SQL, etc.).
+        Provides powerful tools for data cleaning and manipulation.
+
+   Key Functions:
+
+    pd.DataFrame() - Create a data table.
+    pd.read_csv() / pd.read_excel() - Read data from files.
+    df.head() / df.tail() - View top/bottom rows of data.
+    df.describe() - Summary statistics of data.
+    df.groupby() - Group data for aggregation.
+    df.fillna() / df.dropna() - Handle missing values.
+    df.loc[] / df.iloc[] - Access rows and columns.
+
+
+```
+import pandas as pd
+data = {'Name': ['Alice', 'Bob'], 'Age': [24, 27]}
+df = pd.DataFrame(data)
+print(df)
+
+```
+
+
+3. Matplotlib (Visualization)
+
+    Purpose: Create static, animated, and interactive visualizations.
+    Why Use It:
+        Helps visualize data trends, patterns, and distributions.
+        Customizable graphs for presentations.
+
+   Key Functions:
+
+    plt.plot() - Create line plots.
+    plt.bar() - Create bar charts.
+    plt.hist() - Create histograms.
+    plt.scatter() - Create scatter plots.
+    plt.xlabel() / plt.ylabel() - Label axes.
+    plt.title() - Add titles.
+    plt.show() - Display the plot.
+
+```
+import matplotlib.pyplot as plt
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+plt.plot(x, y)
+plt.title("Simple Line Plot")
+plt.show()
+```
+
+
+
+## Maths
+
+
+1. Linear Algebra
+
+Linear Algebra is the backbone of Machine Learning. It helps represent data and models efficiently.
+
+Key Concepts:
+
+    Scalars, Vectors, Matrices, and Tensors:
+        Scalar: A single number (e.g., x = 5).
+        Vector: A 1D array of numbers (e.g., [3, 4, 5]).
+        Matrix: A 2D array of numbers (e.g., a table of rows and columns).
+        Tensor: An n-dimensional array (e.g., a collection of matrices).
+
+    Matrix Operations:
+        Addition/Subtraction: Add/subtract corresponding elements.
+        Dot Product: Multiply rows of one matrix by columns of another.
+        Transpose: Flip a matrix along its diagonal.
+
+
+
+```
+import numpy as np
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+print("Dot Product:\n", np.dot(A, B))
+print("Transpose of A:\n", A.T)
+```
+
+    Applications:
+
+        Representing datasets (rows = data points, columns = features).
+        Neural networks use vectors and matrices for calculations.
+
+
+
+
+2. Probability
+
+Probability helps understand uncertainty in data and predictions.
+Key Concepts:
+
+    Basic Terms:
+        Experiment: A process with uncertain outcomes (e.g., flipping a coin).
+        Event: A specific outcome (e.g., getting heads).
+        Probability (P): Likelihood of an event, between 0 and 1.
+
+    Formula:
+    P(A)=Number of favorable outcomesTotal number of outcomes
+    P(A)=Total number of outcomesNumber of favorable outcomes​
+
+    Important Rules:
+        Addition Rule:
+        P(A∪B)=P(A)+P(B)−P(A∩B)
+        P(A∪B)=P(A)+P(B)−P(A∩B)
+        Multiplication Rule (Independent events):
+        P(A∩B)=P(A)⋅P(B)
+        P(A∩B)=P(A)⋅P(B)
+
+    Distributions:
+        Normal Distribution: Bell-shaped curve used in most ML models.
+        Bernoulli Distribution: For binary outcomes (0 or 1).
+        Poisson Distribution: For rare events over time.
+
+```
+from scipy.stats import norm
+x = 0.5
+print("Probability Density at x=0.5:", norm.pdf(x, loc=0, scale=1))  # PDF of a normal distribution
+```
+
+
+3. Statistics
+
+Statistics is essential for analyzing and interpreting data.
+Key Concepts:
+
+    Descriptive Statistics:
+        Mean: Average value.
+        Mean=Sum of all valuesNumber of values
+        Mean=Number of valuesSum of all values​
+        Median: Middle value when data is sorted.
+        Mode: Most frequent value.
+        Standard Deviation (σ): Measures how spread out the data is.
+
+    Inferential Statistics:
+        Hypothesis Testing: Testing assumptions about data.
+        Confidence Intervals: Range within which a value lies with certain probability.
+
+    Correlation vs. Causation:
+        Correlation: Shows how two variables are related.
+        Causation: Shows that one variable causes another.
+
+
+
+```
+import numpy as np
+data = [1, 2, 3, 4, 5]
+print("Mean:", np.mean(data))
+print("Standard Deviation:", np.std(data))
+```
+
+
+
+4. Calculus
+
+Calculus is used for optimization in ML, like finding the minimum error in models.
+Key Concepts:
+
+    Derivatives:
+        Measure the rate of change of a function.
+        Used in Gradient Descent to minimize errors.
+        Example: Slope of a line.
+
+    Integrals:
+        Measure the area under a curve.
+        Used in probability for continuous distributions.
+
+    Example:
+        Given f(x)=x2f(x)=x2, the derivative is f′(x)=2xf′(x)=2x.
+
+    Partial Derivatives:
+        Used when working with multiple variables (e.g., weights in a neural network).
+
+
+```
+import sympy as sp
+x = sp.Symbol('x')
+func = x**2
+derivative = sp.diff(func, x)
+print("Derivative of x^2:", derivative)
+```
